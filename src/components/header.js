@@ -8,12 +8,12 @@ import {
     AppRegistry
 } from 'react-native';
 
-const Header = () => {
+const Header = (props) => {
     const {textStyle, viewStyle} = styles;
 
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}>Albums!</Text>
+            <Text style={textStyle}>{props.headerText}</Text>
         </View>
     )
 };
@@ -25,7 +25,7 @@ const styles = {
         alignItems: 'center',
         height: 60,
         paddingTop: 10,
-        shadowColor: '#000',
+        shadowColor: '#F8FFF8',
         shadowOffset: {width: 0, height: 20},
         shadowOpacity: 0.9,
         elevation: 2,
